@@ -1,0 +1,32 @@
+{
+    "name": "blog",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "nuxt": "^3.17.6"
+    },
+    "devDependencies": {
+        "@iconify-json/lucide": "^1.2.54",
+        "@nuxt/ui": "^3.2.0",
+        "@storyblok/nuxt": "^7.1.1"
+    },
+    "overrides": {
+        "tailwindcss": "4.1.5",
+        "@tailwindcss/postcss": "4.1.5",
+        "@tailwindcss/vite": "4.1.5"
+    },
+    "resolutions": {
+        "tailwindcss": "4.1.5",
+        "@tailwindcss/postcss": "4.1.5",
+        "@tailwindcss/vite": "4.1.5"
+    },
+    "author": "syvixor",
+    "license": "MIT"
+}
