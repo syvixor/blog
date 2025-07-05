@@ -1,9 +1,9 @@
 export default defineAppConfig({
     // https://ui.nuxt.com/getting-started/theme#design-system
-    color: "#00A63E",
+    color: "#155DFC",
     ui: {
         colors: {
-            primary: "green",
+            primary: "blue",
             neutral: "neutral",
         }
     }
