@@ -24,8 +24,17 @@ const { blok } = defineProps(["blok"]);
         <div class="flex justify-between items-center">
             <img :src="blok.cover.filename" :alt="blok.cover.title" class="rounded-xl" />
         </div>
-        <div class="space-y-2">
+        <div class="space-y-2" id="content">
             <StoryblokRichText :doc="blok.content" />
         </div>
     </div>
 </template>
+
+<style>
+#content {
+    ul {
+        list-style-type: disc;
+        margin-left: 1.25rem;
+    }
+}
+</style>
