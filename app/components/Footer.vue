@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { motion } from "motion-v";
 import type { ButtonProps } from "@nuxt/ui";
 
 const currentYear = new Date().getFullYear();
@@ -26,11 +27,12 @@ const links: ButtonProps[] = [
 </script>
 
 <template>
-    <div class="flex justify-between items-center">
+    <motion.div :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.4 }"
+        class="flex justify-between items-center">
         <p class="text-base font-normal opacity-90">&copy; {{ currentYear }}, Syvixor</p>
         <div class="flex items-center gap-2">
             <UButton :to="link.to" target="_blank" :aria-label="link.label" :icon="link.icon" :variant="link.variant"
                 v-for="link in links" />
         </div>
-    </div>
+    </motion.div>
 </template>

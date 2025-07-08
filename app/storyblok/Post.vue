@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import { motion } from "motion-v";
 const { blok } = defineProps(["blok"]);
 </script>
 
 <template>
-    <div class="space-y-4 lg:w-3/4 mx-auto">
+    <motion.div :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.2 }"
+        class="space-y-4 lg:w-3/4 mx-auto">
         <div class="flex flex-col">
             <h1 class="text-3xl font-bold">{{ blok.caption }}</h1>
             <p class="text-lg font-medium">{{ blok.summary }}</p>
@@ -27,7 +29,7 @@ const { blok } = defineProps(["blok"]);
         <div class="space-y-2" id="content">
             <StoryblokRichText :doc="blok.content" />
         </div>
-    </div>
+    </motion.div>
 </template>
 
 <style>
