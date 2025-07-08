@@ -3,7 +3,7 @@ const { blok } = defineProps(["blok"]);
 </script>
 
 <template>
-    <div class="space-y-4">
+    <div class="space-y-4 lg:w-3/4 mx-auto">
         <div class="flex flex-col">
             <h1 class="text-3xl font-bold">{{ blok.caption }}</h1>
             <p class="text-lg font-medium">{{ blok.summary }}</p>
